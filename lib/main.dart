@@ -10,6 +10,17 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    //Componente principal que inicia o app. Chama outros widgets para montar o app
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      //Widget ThemeData
+      theme: ThemeData(
+        primaryColor: Colors.blue,
+      ),
+      //Conteúdo de tela do app ao ser aberto = Widget Container
+      home: Container(
+        color: Colors.orange,
+      ),
+    );
   }
 }
