@@ -5,8 +5,8 @@ void main() {
 }
 
 //digitar st > Flutter Stateless Widget (componente que não guarda estado)
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,24 @@ class MyWidget extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      //Conteúdo de tela do app ao ser aberto = Widget Container
-      home: Container(
-        color: Colors.orange,
+      //Widget que permite criar outros do Material Design dentro dele
+      home: Scaffold(
+        //appBar widget de título da tela
+        appBar: AppBar(
+          title: Text("My App"),
+        ),
+        //body = widget de conteúdo
+        body: Container(
+          color: Colors.orange,
+        ),
+        //drawer = widget de menu
+        drawer: Container(
+          color: Colors.amber,
+        ),
+        //floatingActionButton = widget de botão
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+        ),
       ),
     );
   }
